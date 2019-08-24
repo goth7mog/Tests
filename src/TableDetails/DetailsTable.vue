@@ -148,7 +148,7 @@ export default {
 						worldTime: new Date().toISOString(),//Suppose this is our main time, which is transmitted from the server
 						toString() {
 							let tzoffset = (new Date(this.worldTime).getTimezoneOffset()) * 60000; //offset in milliseconds
-							let localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+							let localISOTime = (new Date(Date.parse(this.worldTime) - tzoffset)).toISOString().slice(0, -1);
 							return localISOTime; //Local time in ISO format
 						}
 					},
@@ -180,7 +180,7 @@ export default {
 						worldTime: new Date().toISOString(),//Suppose this is our main time, which is transmitted from the server
 						toString() {
 							let tzoffset = (new Date(this.worldTime).getTimezoneOffset()) * 60000; //offset in milliseconds
-							let localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+							let localISOTime = (new Date(Date.parse(this.worldTime) - tzoffset)).toISOString().slice(0, -1);
 							return localISOTime; //Local time in ISO format
 						}
 					},
@@ -212,7 +212,7 @@ export default {
 						worldTime: new Date().toISOString(), //Suppose this is our main time, which is transmitted from the server
 						toString() {
 							let tzoffset = (new Date(this.worldTime).getTimezoneOffset()) * 60000; //offset in milliseconds
-							let localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
+							let localISOTime = (new Date(Date.parse(this.worldTime) - tzoffset)).toISOString().slice(0, -1);
 							return localISOTime; //Local time in ISO format
 						}
 					},
